@@ -41,8 +41,8 @@ type Post {
       register(registerInput: RegisterInput): User!
       login(email: String!, password: String!): User!
       createPost(body: String!): Post!
-      deletePost(postId: ID!): Post!
-      commentPost(postId: ID!, body: String!): Post!
+      deletePost(postId: ID!): String!
+      createComment(postId: String!, body: String!): Post!
       likePost(postId: ID!): Post!
   }
 `

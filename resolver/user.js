@@ -131,7 +131,7 @@ module.exports = {
                 throw new Error(err);
             }
         },
-        async commentPost(_, { postId, body }, context){
+        async createComment(_, { postId, body }, context){
             const { username } = checkAuth(context);
                 const post = await Post.findById(postId);
                 if(body.trim() === ""){
